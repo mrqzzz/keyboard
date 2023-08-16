@@ -6,3 +6,5 @@ require (
 	github.com/MarvinJWendt/testza v0.4.2
 	github.com/containerd/console v1.0.3
 )
+
+replace atomicgo.dev/keyboard v0.2.9 => github.com/mrqzzz/keyboard v0.0.0-20230816091601-10a959cbaf77
