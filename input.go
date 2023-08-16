@@ -165,11 +165,16 @@ var hexCodes = map[string]keys.Key{
 	"1b4f44": {Code: keys.Left, AltPressed: false},
 }
 
+// mrqzzz handle leftover bytes from previous inputTTY.Read
+var leftover [4]byte
+var leftoverSize = 0
+
 func getKeyPress() (keys.Key, error) {
-	var buf [256]byte
+	var buf [1024]byte
 
 	// Read
 	numBytes, err := inputTTY.Read(buf[:])
+
 	if err != nil {
 		if errors.Is(err, os.ErrClosed) {
 			return keys.Key{}, nil
@@ -206,13 +211,28 @@ func getKeyPress() (keys.Key, error) {
 	}
 
 	var runes []rune
-	b := buf[:numBytes]
+
+	var b []byte
+	if leftoverSize == 0 {
+		b = buf[:numBytes]
+	} else if leftoverSize > 0 {
+		b = make([]byte, leftoverSize+numBytes)
+		copy(b[:leftoverSize], leftover[:])
+		copy(b[leftoverSize:], buf[:numBytes])
+		leftoverSize = 0
+	}
 
 	// Translate stdin into runes.
 	for i, w := 0, 0; i < len(b); i += w { //nolint:wastedassign
 		r, width := utf8.DecodeRune(b[i:])
 		if r == utf8.RuneError {
-			return keys.Key{}, fmt.Errorf("could not decode rune: %w", err)
+			if i-len(b) < 4 {
+				copy(leftover[:], b[i:])
+				leftoverSize = len(b) - i
+				break
+			} else {
+				return keys.Key{}, fmt.Errorf("could not decode rune: %w", err)
+			}
 		}
 		runes = append(runes, r)
 		w = width
