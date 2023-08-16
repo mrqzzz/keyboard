@@ -1,5 +1,7 @@
 module atomicgo.dev/keyboard
 
+replace github.com/atomicgo.dev/keyboard => github.com/mrqzzz/keyboard v0.0.0-20230816081401-a3ee755ce404
+
 go 1.19
 
 require (
@@ -20,5 +22,3 @@ require (
 	golang.org/x/sys v0.0.0-20220319134239-a9b59b0215f8 // indirect
 	golang.org/x/term v0.0.0-20210927222741-03fcf44c2211 // indirect
 )
-
-replace github.com/atomicgo.dev/keyboard => github.com/mrqzzz/keyboard v0.0.0-20230607163628-9c099e7020fc
