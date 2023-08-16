@@ -6,8 +6,8 @@ import (
 	"os"
 	"unicode/utf8"
 
-	"mrqzzz/keyboard/internal"
-	"mrqzzz/keyboard/keys"
+	"github.com/mrqzzz/keyboard/internal"
+	"github.com/mrqzzz/keyboard/keys"
 )
 
 // Sequence mappings.
