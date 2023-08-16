@@ -6,8 +6,8 @@ import (
 	"os"
 	"unicode/utf8"
 
-	"github.com/mrqzzz/keyboard/internal"
-	"github.com/mrqzzz/keyboard/keys"
+	"atomicgo.dev/keyboard/internal"
+	"atomicgo.dev/keyboard/keys"
 )
 
 // Sequence mappings.
