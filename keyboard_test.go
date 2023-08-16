@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/MarvinJWendt/testza"
-	"mrqzzz.dev/keyboard"
-	"mrqzzz.dev/keyboard/keys"
+	"mrqzzz/keyboard"
+	"mrqzzz/keyboard/keys"
 )
 
 func TestMocking(t *testing.T) {
