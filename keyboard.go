@@ -6,7 +6,7 @@ import (
 
 	"github.com/containerd/console"
 
-	"github.com/mrqzzz/keyboard/keys"
+	"atomicgo.dev/keyboard/keys"
 )
 
 var windowsStdin *os.File

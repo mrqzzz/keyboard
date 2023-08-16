@@ -1,6 +1,6 @@
 package keys
 
-import "github.com/mrqzzz/keyboard/internal"
+import "atomicgo.dev/keyboard/internal"
 
 // Key contains information about a keypress.
 type Key struct {
