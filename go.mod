@@ -1,4 +1,4 @@
-module atomicgo.dev/keyboard
+module github.com/mrqzzz/keyboard
 
 go 1.15
 
@@ -7,4 +7,3 @@ require (
 	github.com/containerd/console v1.0.3
 )
 
-replace atomicgo.dev/keyboard v0.2.9 => github.com/mrqzzz/keyboard v0.0.0-20230816091601-10a959cbaf77
