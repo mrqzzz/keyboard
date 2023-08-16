@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"mrqzzz/keyboard/keys"
+	"mrqzzz.dev/keyboard/keys"
 )
 
 func ExampleListen_simple() {

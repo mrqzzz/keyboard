@@ -1,6 +1,6 @@
 package keys
 
-import "mrqzzz/keyboard/internal"
+import "mrqzzz.dev/keyboard/internal"
 
 // Key contains information about a keypress.
 type Key struct {

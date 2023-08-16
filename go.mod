@@ -1,4 +1,4 @@
-module mrqzzz/keyboard
+module mrqzzz.dev/keyboard
 
 go 1.19
 
