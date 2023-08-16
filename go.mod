@@ -1,6 +1,4 @@
-module atomicgo.dev/keyboard
-
-replace github.com/atomicgo.dev/keyboard => github.com/mrqzzz/keyboard v0.0.0-20230816081401-a3ee755ce404
+module mrqzzz/keyboard
 
 go 1.19
 

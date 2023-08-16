@@ -3,9 +3,9 @@ package keyboard_test
 import (
 	"testing"
 
-	"atomicgo.dev/keyboard"
-	"atomicgo.dev/keyboard/keys"
 	"github.com/MarvinJWendt/testza"
+	"mrqzzz/keyboard"
+	"mrqzzz/keyboard/keys"
 )
 
 func TestMocking(t *testing.T) {
