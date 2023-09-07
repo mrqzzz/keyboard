@@ -149,6 +149,8 @@ var sequences = map[string]keys.Key{
 	"\x1b\x1b[32~": {Code: keys.F18, AltPressed: true},
 	"\x1b\x1b[33~": {Code: keys.F19, AltPressed: true},
 	"\x1b\x1b[34~": {Code: keys.F20, AltPressed: true},
+	"\u001B[H":     {Code: keys.Home},
+	"\u001B[F":     {Code: keys.End},
 }
 
 var hexCodes = map[string]keys.Key{
